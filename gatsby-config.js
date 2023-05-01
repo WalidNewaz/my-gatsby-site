@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My Super Cool Adventure Blog`,
+    title: `Test App`,
     siteUrl: `http://adventure.walidnewaz.com`,
   },
   plugins: [

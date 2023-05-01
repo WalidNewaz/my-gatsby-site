@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Welcome to Walid's Gatsby site!">
+    <Layout pageTitle="Welcome to Walid's first Gatsby site!">
       <p>I'm making this by following the Gatsby tutorial.</p>
       <StaticImage
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
