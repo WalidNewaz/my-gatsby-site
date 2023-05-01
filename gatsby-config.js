@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My Super Cool Blog`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `My Super Cool Adventure Blog`,
+    siteUrl: `http://adventure.walidnewaz.com`,
   },
   plugins: [
     "gatsby-plugin-image",
