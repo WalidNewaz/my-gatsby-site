@@ -1,0 +1,30 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+        nodejs: 18
+    on-failure: ABORT | CONTINUE
+    commands:
+      - echo Installing Node packages...
+      - npm install
+  pre_build:
+    on-failure: ABORT | CONTINUE
+    commands:
+      - echo Removing objects in the S3 bucket...
+      - aws s3 rm s3://adventure.walidnewaz.com --recursive
+  build:
+    on-failure: ABORT | CONTINUE
+    commands:
+      - echo Build initiated...
+      - npm run build
+  post_build:
+    on-failure: ABORT | CONTINUE
+    commands:
+      - echo Synchronizing public directory...
+      - aws s3 sync ./public s3://adventure.walidnewaz.com
+artifacts:
+  base-directory: public
+  files:
+    - '**/*'
+  discard-paths: yes
